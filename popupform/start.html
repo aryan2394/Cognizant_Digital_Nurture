@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .open{
+                background-color: olivedrab;
+                padding: 8px 10px;
+                font: 400;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .first{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                button{
+                    width: fit-content;
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                    background-color: rebeccapurple;
+                    color: goldenrod;
+                    cursor: pointer;
+                }
+            }
+            .form{
+                margin: 10px;
+                padding: 20px;
+                width: 50%;
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center; */
+                align-items: center;
+                border: 1px solid black;
+            }
+            form{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            input,button{
+                padding: 8px 10px;
+            }
+            .submit{
+                background-color: green;
+                cursor: pointer;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="open">Open Contact Button</button>
+        <div class="form" hidden>
+            <div class="first">
+                <h1>Submit form</h1>
+                <button class="cseBtn">X</button>
+            </div>
+            <form>
+                <input type="text" placeholder="enter name" class="name">
+                <input type="text" placeholder="enter email" class="email">
+                <textarea placeholder="enter message" class="message"></textarea>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+    <script>
+        let sbtBtn=document.querySelector(".submit");
+        let openBtn=document.querySelector(".open");
+        let formDiv=document.querySelector(".form");
+        let closeBtn=document.querySelector(".cseBtn");
+        let form=document.querySelector("form");
+        openBtn.addEventListener("click",()=>
+        {
+            formDiv.hidden=false;
+        })
+        closeBtn.addEventListener("click",()=>
+        {
+            formDiv.hidden=true;
+        })
+        form.addEventListener("submit",(e)=>
+        {
+            e.preventDefault();
+            alert("data submiited");
+            formDiv.hidden=true;
+        })
+    </script>
+</html>
