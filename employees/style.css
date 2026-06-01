@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+input{
+    padding: 8px;
+}
+.add{
+    background-color: green;
+    padding: 7px 18px;
+}
+table{
+    width: 70%;
+    border-collapse: collapse;
+}
+th,td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 6px;
+}
+.delete{
+    background-color: red;
+    padding: 8px;
+}
