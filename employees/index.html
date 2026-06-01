@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+.add{
+    background-color:green;
+    color:white;
+}
+
+.delete{
+    background-color:red;
+    color:white;
+}
+
+input,button{
+    padding:8px 10px;
+    margin:5px;
+}
+
+table{
+    width:80%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid black;
+    text-align:center;
+    padding:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Employee Records Management</h1>
+
+<form>
+
+    <input class="emp_name"
+    type="text"
+    placeholder="Employee Name">
+
+    <input class="emp_id"
+    type="text"
+    placeholder="Employee ID">
+
+    <input class="dept"
+    type="text"
+    placeholder="Department">
+
+    <input class="salary"
+    type="text"
+    placeholder="Salary">
+
+    <button
+    type="button"
+    class="add"
+    onclick="addEmployee()">
+
+    Add Employee
+
+    </button>
+
+</form>
+
+<table>
+
+    <tr>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+
+    <tbody id="table-body">
+
+    </tbody>
+
+</table>
+
+<script>
+
+function addEmployee(){
+
+    let emp_name=document.querySelector(".emp_name");
+    let emp_id=document.querySelector(".emp_id");
+    let emp_dept=document.querySelector(".dept");
+    let emp_sal=document.querySelector(".salary");
+
+    let tableBody=document.querySelector("#table-body");
+
+    if(
+        emp_name.value==="" ||
+        emp_id.value==="" ||
+        emp_dept.value==="" ||
+        emp_sal.value==="")
+    {
+        alert("Fill all fields");
+        return;
+    }
+
+    let row=`
+        <tr>
+
+        <td>${emp_name.value}</td>
+        <td>${emp_id.value}</td>
+        <td>${emp_dept.value}</td>
+        <td>${emp_sal.value}</td>
+
+        <td>
+        <button
+        class="delete"
+        onclick="deleteRow(this)">
+        Delete
+        </button>
+        </td>
+
+        </tr>
+    `;
+
+    tableBody.innerHTML += row;
+
+    // inputs clear
+
+    emp_name.value="";
+    emp_id.value="";
+    emp_dept.value="";
+    emp_sal.value="";
+}
+
+function deleteRow(button){
+
+    button.parentElement.parentElement.remove();
+
+}
+
+</script>
+
+</body>
+
+</html>

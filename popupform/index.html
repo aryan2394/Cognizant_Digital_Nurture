@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+
+            }
+            .main{
+                height: 200px;
+            }
+            .contact-button{
+                margin-left: 80px;
+            }
+            .show{
+                display: none;
+            }
+            .form{
+                height: auto;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+            .line1{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .submit{
+                width: fit-content;
+                text-align: center;
+
+            }
+        </style>
+        <body>
+            <div class="main">
+                <p>+......................................................................................+</p>
+                <button class="contact-button">Open Contact Form</button>
+                <p>+......................................................................................+</p>
+            </div>
+            <div class="show">
+            <div class="form">
+                <div class="line1">
+                    <h1>Contact Us</h1>
+                    <button class="close-btn">X</button>
+                </div>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="enter your name" required> <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id=""email placeholder="enter your email" required> <br>
+                    <label for="message">Message:</label>
+                    <textarea placeholder="enter message" required></textarea> <br>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+            </div>
+        </body>
+        <script>
+            let contactBtn=document.querySelector(".contact-button");
+            let closeBtn=document.querySelector(".close-btn");
+            let showForm=document.querySelector(".show");
+            let submitBtn=document.querySelector(".submit");
+            let form=document.querySelector("form");
+            contactBtn.addEventListener("click",()=>
+            {
+                showForm.style.display="block";
+            })
+            closeBtn.addEventListener("click",()=>
+            {
+                showForm.style.display="none";
+            })
+            submitBtn.addEventListener("click",()=>
+            {
+                showForm.style.display="none";
+            })
+            form.addEventListener("submit",(e)=>
+            {
+                e.preventDefault();
+                alert("form submitted sucessfully");
+                showForm.style.display="none";
+
+            })
+        </script>
+    </head>
+</html>
