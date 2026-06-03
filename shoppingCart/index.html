@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-</body>
-<script src="./app.js"></script>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>Product Details Form</h1>
+        <table class="details">
+            <tr>
+                <th>Id</th>
+                <th>Items</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chips</td>
+                <td><button class="addChips">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Burger</td>
+                <td><button class="addBurger">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chocolate</td>
+                <td><button class="addChoco">Add to Cart</button></td>
+            </tr>
+        </table>
+        <h1>Product Submission Form</h1>
+        <table class="details">
+            <tr>
+                <th>Id</th>
+                <th>Items</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chips</td>
+                <td class="d1">0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Burger</td>
+                <td class="d2">0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Chocolate</td>
+                <td class="d3">0</td>
+            </tr>
+        </table>
+    </body>
+    <script src="./app.js"></script>
 </html>

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    width: 70%;
+    border-collapse:collapse;
+    margin: 10px;
+}
+th,td{
+    border:1px solid black;
+    text-align: center;
+    padding: 6px 8px;
+}
+button{
+    padding: 6px 8px;
+    cursor:pointer;
+    background-color:red;
+    border-radius:6px;
+}
