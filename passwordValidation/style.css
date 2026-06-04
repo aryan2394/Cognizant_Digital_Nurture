@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: auto;
+    width: 300px;
+    border: 1px solid black;
+    padding: 6px;
+    background-color: aquamarine;
+}
+label,input{
+    margin: 6px;
+}
+input{
+    width: 80%;
+    padding: 4px 8px;
+}
+button{
+    padding: 5px 6px;
+    width: 82%;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 6px;
+    margin: 3px;
+}
